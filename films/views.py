@@ -34,7 +34,7 @@ def check_username(request):
             </div>
         """
         msg = """
-            <div style="color : red;"><h1>This username already exists</h1></div>
+            <div id='username-error' class='error h1'>This username already exists!</div>
         """
         return HttpResponse(msg)
     else:
@@ -45,6 +45,6 @@ def check_username(request):
             </div>
         """
         msg = """
-            <div style="color : green;"><h1>This username is available</h1></div>
+            <div id='username-error' class='success h1'>This username is available!</div>
         """
         return HttpResponse(msg)

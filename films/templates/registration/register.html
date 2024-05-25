@@ -12,7 +12,7 @@
         <div class="form-group mb-3">
             <label>{{ form.username.label_tag }}</label>
             {{ form.username.errors }}
-            {% render_field form.username hx-post="/check-username/" hx-trigger="keyup" hx-target="#username-error" hx-swap="outerhtml" class="form-control" %}
+            {% render_field form.username hx-post="/check-username/" hx-trigger="keyup changed delay:250ms" hx-target="#username-error" hx-swap="outerhtml" class="form-control" %}
 
             <label>{{ form.password1.label_tag }}</label>
             {{ form.password1.errors }}
@@ -23,8 +23,7 @@
             {% render_field form.password2 class="form-control" %}
         </div>
 
-        <div id="username-error">
-        </div>
+        <div id="username-error">REPLACED</div>
         
         <button type="submit" class="btn btn-success mt-2">Register</button>
     </form>
