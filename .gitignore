@@ -158,3 +158,45 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+# --------------- MLR's .gitignore ------------------------
+# 5/22/24
+#
+.env
+.venv
+.venv*
+.venv_*/
+venv
+venv*
+.virt/
+# *.vscode/
+
+# From "Django for Professionals 3.0" p.161
+# If you have any environment variables containing secret strings, don't save.
+# docker-compose.yml
+
+# -- Scratch and private folders -------
+SCRATCH
+PRIVATE
+RESOURCES
+#-- Deprecated -------
+aaJunk
+zzJunk
+
+# -- Data files -------
+*.xlsx
+*.xls
+data/
+input/
+output/
+*.sqlite3
+
+# --  -------
+__pycache__/
+.DS_Store  # Mac only
+
+# -- FROM BUGBYTES source code ------------------
+db.sqlite3
+__pycache__
+*.pyc
+notes.txt
+media/
