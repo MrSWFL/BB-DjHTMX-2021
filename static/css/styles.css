@@ -4,9 +4,9 @@
 
 .error {
     color: red;
-    font-size: 50px;
-    transform: rotate(45deg);
-    transition: all ease-in 2s ;
+    /* font-size: 50px; */
+    /* transform: rotate(45deg); */
+    transition: all ease-in 1s ;
 }
 
 .success {
