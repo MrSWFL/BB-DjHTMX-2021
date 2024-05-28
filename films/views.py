@@ -85,3 +85,11 @@ def add_film(request):
     # Return an HTML template with all the user's films used by the partial "film-list.html".
     films = request.user.films.all()             # Get all the user's files from DB.
     return render(request, 'partials/film-list.html', {'films' : films})
+
+def delete_film(request, pk):
+    # Remove the film from the user's list.
+    request.user.films.remove(pk)
+    
+    # Return the HTML fragment with the list of user's films.
+    films = request.user.films.all()             # Get all the user's files from DB.
+    return render(request, 'partials/film-list.html', {'films' : films})

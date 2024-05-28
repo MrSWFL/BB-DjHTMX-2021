@@ -1,5 +1,5 @@
 # BB-DjHTMX-2021
-Study: BugBuyes.io | Django &amp; HTMX
+Study: BugBytes.io | Django &amp; HTMX
 
 Created: 2024-05-24
 

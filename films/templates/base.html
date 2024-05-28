@@ -30,6 +30,13 @@
         {% block content %}
         {% endblock %}
     </div>
+
+    {# If an HTMX:configRequest is used, add the CSR token to the request headers #}
+    <script>
+        document.body.addEventListener('htmx:configRequest', function(evt) {
+            evt.detail.headers['X-CSRFToken'] = '{{ csrf_token }}';
+        });
+    </script>
     
 </body>
 </html>
