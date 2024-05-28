@@ -1,0 +1,24 @@
+<!-- films/templates/partials/search-results.html -->
+{% if results %}
+    {% csrf_token %}
+
+    <ul class="list-group col-xs-12">
+        {% for film in results %}
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                {{ film.name }}
+                <span 
+                    class="badge badge-success badge-pill"
+                    style="cursor: pointer"
+                    hx-post="{% url 'add-film' %}"
+                    hx-vals='{"filmname": "{{film.name}}"}' 
+                    hx-target="#film-list">
+                Add</span>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% else %}
+    <p>No search results</p>
+{% endif %}
+<!-- hx-vals="{'filmname': '{{film.name}}'}"     BAD  this is an HTMX problem with single/double-->
+<!-- hx-vals='{"filmname": "{{film.name}}"}'     GOOD -->

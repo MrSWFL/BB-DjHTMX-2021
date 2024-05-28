@@ -14,7 +14,7 @@ SECRET_KEY = 'django-insecure-$q-5302!@0wg5it)i2_35n@&grz)&3^bdms^7pvpax)za+ei$v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -121,3 +121,6 @@ AUTH_USER_MODEL = 'films.User'
 
 LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'index'
+
+# -- MLR -------------------
+handler404 = 'films.views.custom_404'
